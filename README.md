@@ -1,1 +1,1 @@
-# projGestioBiblio
+# Óscar González Serrano
