@@ -1,1 +1,0 @@
-# Óscar González Serrano
