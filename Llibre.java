@@ -15,6 +15,16 @@ public class Llibre{
     public String getAutor() { return autor; }
     public boolean esPrestat() { return prestat; }
     public String getCategoria() {return this.categoria;}
+    // Comprovar disponibilitat
+    public void comprovarDisp(){
+        if(!this.prestat){
+            System.out.println("El llibre és disponible");
+        }
+        else{
+            System.out.println("El llibre NO és disponible");
+        }
+    }
+
     public void prestar() { prestat = true; }
     public void retornar() { prestat = false; }
 
