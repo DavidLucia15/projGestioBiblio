@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Biblioteca {
     private List<Llibre> llibres;
+    private List<Usuari> usuaris;
 
     public Biblioteca() {
         this.llibres = new ArrayList<>();
@@ -19,6 +20,22 @@ public class Biblioteca {
             }
         }
         return null;
+    }
+
+    public void registrarUsuari(Usuari usuari){
+        this.usuaris.add(usuari);
+    }
+
+    public Usuari usuariMesActiu(){
+        int maxim = Integer.MIN_VALUE;
+        Usuari usuariMaxim;
+        for(int i = 0; i < usuaris.size(); i++){
+            if(usuaris.get(i).getHistorial().size() > maxim){
+                maxim = usuaris.get(i).historialPrestecs.length();
+                usuariMaxim = usuaris.get(i);
+            }
+        }
+        return usuariMaxim;
     }
 
     public List<Llibre> getLlibres() {
