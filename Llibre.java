@@ -1,4 +1,4 @@
-public class Llibre{
+public class Llibre implements Comparable<Llibre>{
     private String titol;
     private String autor;
     private boolean prestat;
@@ -30,6 +30,11 @@ public class Llibre{
 
     @Override
     public String toString() {
-        return titol + " de " + autor + (prestat ? " (En préstec)" : " (Disponible)");
+        return titol + " de " + autor + (prestat ? " (En préstec)" : " (Disponible)") + "\nCategoria: " + this.categoria;
+    }
+
+    @Override
+    public int compareTo(Llibre llibre2) {
+        return this.categoria.compareToIgnoreCase(llibre2.categoria);
     }
 }
