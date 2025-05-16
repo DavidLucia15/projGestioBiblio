@@ -14,7 +14,7 @@ this.llibresPrestats = new ArrayList<>();
 public String getNom() { return nom; }
 public List<Llibre> getLlibresPrestats() { return llibresPrestats; }
 public List<Llibre> getHistorial(){
-    return historialPrestecs;
+    return this.historialPrestecs;
 }
 public void afegirLlibre(Llibre llibre) { 
     llibresPrestats.add(llibre); 
