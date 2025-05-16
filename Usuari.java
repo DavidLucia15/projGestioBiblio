@@ -20,5 +20,6 @@ public void afegirLlibre(Llibre llibre) {
     llibresPrestats.add(llibre); 
     historialPrestecs.add(llibre);
 }
+public void consultarHistorial(){System.out.println(this.historialPrestecs);}
 public void retornarLlibre(Llibre llibre) { llibresPrestats.remove(llibre); } 
 }
