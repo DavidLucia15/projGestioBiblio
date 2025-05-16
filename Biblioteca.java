@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Biblioteca {
@@ -36,6 +37,17 @@ public class Biblioteca {
             }
         }
         return usuariMaxim;
+
+    public void ordenarLlibres(){
+        Collections.sort(this.llibres);
+    }
+
+    public void imprimirLlibresCategoria(String categoria){
+        for(int i = 0; i < this.llibres.size(); i++){
+            if(this.llibres.get(i).getCategoria() == categoria){
+                System.out.println(this.llibres.get(i));
+            }
+        }
     }
 
     public List<Llibre> getLlibres() {
